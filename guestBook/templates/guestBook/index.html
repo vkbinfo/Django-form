@@ -25,19 +25,19 @@
   <body>
 
     <div class="container theme-showcase" role="main">
-
       <div class="jumbotron">
-        <h1>Guest Book</h1>
-        <a type="button" class="btn btn-link" href="sign.html">Sign the Guest Book</a>
-      </div>
-    {% for c in comment %}
-      <div class="page-header">
-        <h1>{{c.name}}</h1>
-      </div>
-      <div class="well">
-        <p>{{c.comment}}</p>
-      </div>
-    {% endfor %}
+          <h1>Guest Book</h1>
+          <a type="button" class="btn btn-link" href=" {% url 'sign' %}">Sign the Guest Book</a>
+        </div>
+      {% for c in comment %}
+        <div class="page-header">
+          <h1>{{c.name}}</h1>
+        </div>
+        <div class="well">
+          <p>{{c.comment}}</p>
+        </div>
+      {% endfor %}
+
     </div> <!-- /container -->
 
   </body>
